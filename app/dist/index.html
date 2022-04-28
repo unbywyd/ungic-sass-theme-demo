@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Structure -->
+    <link rel="stylesheet" href="index.min.css">
+
+    <!-- Themes -->
+    <link rel="stylesheet" href="component-index-theme-default.css">
+    <link rel="stylesheet" href="component-index-theme-inv-default-inv.css">
+</head>
+<body class="default">
+    <div class="app">
+        <p><b>Note!</b> I confess that this example looks terrible, it was created only to demonstrate the possibilities, the rest is all in your hands!</p>
+        <p>You can see <a href="https://unbywyd.com" target="_blank">my site</a> which has a more presentable look, also <a href="https://israelicoder.com/public/app2/" target="_blank">see this my work</a></p>
+        <button class="btn" id="switch">Switch theme</button>
+        <script>
+            document.getElementById('switch').addEventListener('click', e => {
+                e.preventDefault();
+                if(document.body.classList.contains('default-inv')) {
+                    document.body.classList.add('default');
+                    document.body.classList.remove('default-inv');
+                } else {
+                    document.body.classList.remove('default');
+                    document.body.classList.add('default-inv');
+                }
+            })
+        </script>
+    </div>
+    <div id="root"></div>
+    <script src="index.min.js"></script>
+</body>
+</html>
